@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sharjah Palace Hotel | 4-Star Luxury in Sharjah, UAE</title>
+<meta name="description" content="Experience modern Arabian luxury at Sharjah Palace Hotel. Premium rooms, rooftop pool, spa, dining and direct booking benefits in the heart of Sharjah.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* ===== RESET & TOKENS ===== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#fdfcf9;--bg-2:#f6f1e7;--bg-3:#efe7d6;
+  --surface:#ffffff;--surface-2:#faf7f0;
+  --line:rgba(20,30,45,.09);--line-2:rgba(20,30,45,.14);
+  --navy:#0f2238;--navy-2:#1c3757;
+  --gold:#b8873a;--gold-2:#d4a24d;--gold-3:#8a6428;--gold-soft:#f5ead4;
+  --text:#1a2332;--muted:#6b7787;--muted-2:#8a94a3;--white:#fff;
+  --wa:#25d366;--wa-2:#128c7e;
+  --r:20px;--r-sm:14px;
+  --ease:cubic-bezier(.22,1,.36,1);--ease-out:cubic-bezier(.16,1,.3,1);
+  --shadow-sm:0 2px 12px rgba(15,34,56,.06);
+  --shadow:0 12px 40px rgba(15,34,56,.09);
+  --shadow-lg:0 30px 70px rgba(15,34,56,.14);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;cursor:none;-webkit-font-smoothing:antialiased}
+@media (max-width:900px){body{cursor:auto}}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:none}
+@media (max-width:900px){button{cursor:pointer}}
+::selection{background:var(--gold);color:#fff}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--bg-2)}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--gold-2),var(--gold));border-radius:10px}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:.02;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ===== CURSOR ===== */
+.cursor,.cursor-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%}
+.cursor{width:38px;height:38px;border:1.5px solid var(--gold);transition:width .3s var(--ease),height .3s var(--ease),background .3s}
+.cursor-dot{width:5px;height:5px;background:var(--gold);transform:translate(-50%,-50%)}
+.cursor.hover{width:70px;height:70px;background:rgba(184,135,58,.12);border-color:var(--gold-2)}
+@media (max-width:900px){.cursor,.cursor-dot{display:none}}
+
+/* ===== PRELOADER ===== */
+.preloader{position:fixed;inset:0;background:var(--bg);z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;transition:opacity .8s var(--ease),visibility .8s}
+.preloader.done{opacity:0;visibility:hidden}
+.pre-logo{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.6rem);color:var(--navy);letter-spacing:2px;overflow:hidden}
+.pre-logo span{color:var(--gold);display:inline-block;animation:preUp .9s var(--ease-out) both}
+.pre-logo span:nth-child(1){animation-delay:.05s}
+.pre-logo span:nth-child(2){animation-delay:.1s}
+.pre-logo span:nth-child(3){animation-delay:.15s}
+.pre-logo span:nth-child(4){animation-delay:.2s}
+.pre-logo span:nth-child(5){animation-delay:.25s}
+.pre-logo span:nth-child(6){animation-delay:.3s}
+.pre-logo span:nth-child(7){animation-delay:.35s}
+.pre-logo span:nth-child(8){animation-delay:.4s}
+@keyframes preUp{from{transform:translateY(110%);opacity:0}to{transform:translateY(0);opacity:1}}
+.pre-bar{width:200px;height:2px;background:rgba(15,34,56,.08);overflow:hidden;border-radius:2px}
+.pre-bar::after{content:'';display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold-2),var(--gold));animation:preFill 1.6s var(--ease) forwards}
+@keyframes preFill{to{width:100%}}
+
+/* ===== PROGRESS ===== */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold-2),var(--gold),var(--gold-3));z-index:10000;box-shadow:0 0 12px rgba(184,135,58,.5)}
+
+/* ===== HEADER ===== */
+.header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:22px 0;transition:padding .4s var(--ease),background .4s,backdrop-filter .4s,border-color .4s,box-shadow .4s;border-bottom:1px solid transparent}
+.header.scrolled{padding:14px 0;background:rgba(253,252,249,.85);backdrop-filter:blur(20px);border-bottom-color:var(--line);box-shadow:0 4px 24px rgba(15,34,56,.05)}
+.container{width:min(1280px,92%);margin:0 auto}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:var(--navy);letter-spacing:.5px;display:flex;align-items:center;gap:10px;transition:color .3s}
+.header:not(.scrolled) .logo{color:#fff;text-shadow:0 2px 10px rgba(15,34,56,.5)}
+.logo-mark{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold-2),var(--gold-3));color:#fff;font-weight:700;font-size:1rem;font-family:'Playfair Display',serif;box-shadow:0 6px 18px rgba(184,135,58,.3)}
+.logo b{color:var(--gold-2);font-weight:600;transition:color .3s}
+.header.scrolled .logo b{color:var(--gold)}
+.nav-links{display:flex;gap:34px;list-style:none}
+.nav-links a{color:var(--text);font-size:.88rem;font-weight:500;letter-spacing:.3px;position:relative;padding:4px 0;transition:color .3s}
+.header:not(.scrolled) .nav-links a{color:#fff;text-shadow:0 2px 8px rgba(15,34,56,.5)}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:0;height:1.5px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-2));transition:width .45s var(--ease)}
+.nav-links a:hover{color:var(--gold-3)}
+.header:not(.scrolled) .nav-links a:hover{color:var(--gold-2)}
+.nav-links a:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:18px}
+.nav-tel{color:var(--text);font-size:.85rem;display:flex;align-items:center;gap:8px;transition:color .3s}
+.header:not(.scrolled) .nav-tel{color:#fff;text-shadow:0 2px 8px rgba(15,34,56,.5)}
+.nav-tel:hover{color:var(--gold-3)}
+.header:not(.scrolled) .nav-tel:hover{color:var(--gold-2)}
+.burger{display:none;background:none;border:none;color:var(--navy);font-size:1.4rem;padding:6px}
+.header:not(.scrolled) .burger{color:#fff}
+
+/* ===== BUTTONS ===== */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 30px;border-radius:100px;font-weight:600;font-size:.88rem;letter-spacing:.3px;border:1px solid transparent;overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s,color .3s;background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#fff;box-shadow:0 8px 24px rgba(184,135,58,.28)}
+.btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--gold),var(--gold-3));opacity:0;transition:opacity .4s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(184,135,58,.4)}
+.btn:hover::before{opacity:1}
+.btn > *{position:relative;z-index:1}
+.btn-ghost{background:transparent;color:var(--navy);border:1.5px solid var(--navy);box-shadow:none}
+.btn-ghost::before{background:var(--navy)}
+.btn-ghost:hover{color:#fff;box-shadow:0 14px 34px rgba(15,34,56,.25)}
+.btn-sm{padding:11px 22px;font-size:.8rem}
+.btn-wa{background:linear-gradient(135deg,var(--wa),var(--wa-2));color:#fff;box-shadow:0 8px 24px rgba(37,211,102,.3)}
+.btn-wa::before{background:linear-gradient(135deg,var(--wa-2),#0b6e62)}
+.btn-wa:hover{box-shadow:0 14px 34px rgba(37,211,102,.45)}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;min-height:100svh;display:flex;align-items:center;
+  padding:150px 0 90px;overflow:hidden;background:#0a1220;
+}
+/* The hero background is now the VPIX 360° tour iframe */
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+  overflow:hidden;background:#0a1220;
+}
+.hero-embed{
+  position:absolute;top:50%;left:50%;
+  width:100vw;height:56.25vw;          /* 16:9 */
+  min-width:177.78vh;min-height:100vh; /* cover on tall screens */
+  transform:translate(-50%,-50%);
+  border:0;pointer-events:auto;
+}
+/* Gradient overlay sits above the iframe, below content */
+.hero-bg::after{
+  content:'';position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(
+    180deg,
+    rgba(15,34,56,.55) 0%,
+    rgba(15,34,56,.6) 45%,
+    rgba(15,34,56,.65) 70%,
+    rgba(253,252,249,.92) 100%
+  );
+}
+.hero-vignette{
+  position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(ellipse at center,transparent 40%,rgba(15,34,56,.3) 100%);
+}
+.hero-glow{
+  position:absolute;width:600px;height:600px;border-radius:50%;filter:blur(120px);
+  background:radial-gradient(circle,rgba(212,162,77,.18),transparent 70%);
+  top:-100px;right:-100px;z-index:1;pointer-events:none;opacity:.7;
+}
+.hero-inner{position:relative;z-index:3;width:100%;text-align:center;max-width:1000px;margin:0 auto}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:9px 20px;border-radius:100px;
+  border:1px solid rgba(255,255,255,.55);
+  background:rgba(255,255,255,.9);color:var(--gold-3);
+  font-size:.72rem;letter-spacing:2.5px;text-transform:uppercase;font-weight:700;
+  margin-bottom:32px;backdrop-filter:blur(12px);
+  box-shadow:0 6px 24px rgba(15,34,56,.18);
+}
+.hero-badge i{color:var(--gold)}
+.hero h1{
+  font-family:'Playfair Display',serif;font-weight:500;
+  font-size:clamp(2.6rem,7.5vw,6rem);line-height:1.02;letter-spacing:-.02em;
+  margin-bottom:26px;color:#fff;
+  text-shadow:0 2px 6px rgba(15,34,56,.55),0 10px 34px rgba(15,34,56,.55);
+}
+.hero h1 em{
+  font-style:italic;
+  background:linear-gradient(120deg,#f5d98a 0%,#e7c977 30%,#fff 55%,#e7c977 80%,#f5d98a 100%);
+  background-size:200% auto;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  animation:shine 6s linear infinite;
+  filter:drop-shadow(0 3px 10px rgba(15,34,56,.6));
+}
+@keyframes shine{to{background-position:200% center}}
+.hero p{
+  color:#fff;font-size:clamp(1rem,1.6vw,1.12rem);
+  max-width:640px;margin:0 auto 34px;font-weight:500;
+  text-shadow:0 2px 14px rgba(15,34,56,.7);
+}
+
+/* ===== 360 TOUR LAUNCH BUTTON ===== */
+.tour-launch-btn{
+  display:inline-flex;align-items:center;gap:16px;
+  padding:14px 24px;border-radius:100px;
+  background:rgba(255,255,255,.14);
+  backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.3);
+  color:#fff;text-align:left;
+  transition:transform .4s var(--ease),background .4s,box-shadow .4s;
+  box-shadow:0 10px 30px rgba(15,34,56,.25);
+  max-width:440px;margin-bottom:30px;
+}
+.tour-launch-btn:hover{
+  background:rgba(255,255,255,.22);
+  transform:translateY(-4px);
+  box-shadow:0 16px 40px rgba(15,34,56,.35);
+}
+.tour-icon{
+  width:46px;height:46px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold-2),var(--gold));
+  display:grid;place-items:center;
+  font-size:1.1rem;color:#fff;flex-shrink:0;
+  box-shadow:0 6px 18px rgba(184,135,58,.4);
+  animation:iconSpin 6s linear infinite;
+}
+@keyframes iconSpin{
+  0%,80%,100%{transform:rotate(0)}
+  85%{transform:rotate(-12deg)}
+  90%{transform:rotate(12deg)}
+  95%{transform:rotate(-8deg)}
+}
+.tour-text{display:flex;flex-direction:column;line-height:1.3}
+.tour-text strong{font-size:.92rem;font-weight:600;letter-spacing:.2px}
+.tour-text small{font-size:.76rem;color:rgba(255,255,255,.78);font-weight:400;margin-top:2px}
+.tour-arrow{
+  margin-left:auto;width:34px;height:34px;border-radius:50%;
+  background:rgba(255,255,255,.12);
+  display:grid;place-items:center;font-size:.78rem;
+  transition:transform .4s var(--ease),background .4s;
+}
+.tour-launch-btn:hover .tour-arrow{
+  background:var(--gold);transform:rotate(45deg);
+}
+
+@media (max-width:640px){
+  .tour-launch-btn{padding:12px 18px;gap:12px;max-width:100%}
+  .tour-text strong{font-size:.82rem}
+  .tour-text small{font-size:.68rem}
+  .tour-icon{width:40px;height:40px;font-size:.95rem}
+  .tour-arrow{width:30px;height:30px;font-size:.72rem}
+}
+
+/* ===== BOOKING BAR ===== */
+.book-bar{
+  display:grid;grid-template-columns:repeat(4,1fr) auto;gap:0;
+  background:#ffffff;border:1px solid rgba(184,135,58,.22);border-radius:100px;
+  padding:8px;max-width:1050px;margin:0 auto;text-align:left;
+  box-shadow:0 30px 70px rgba(15,34,56,.35);
+}
+.book-cell{padding:14px 22px;position:relative}
+.book-cell:not(:last-child)::after{content:'';position:absolute;right:0;top:20%;height:60%;width:1px;background:var(--line-2)}
+.book-cell label{display:block;font-size:.66rem;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold-3);font-weight:700;margin-bottom:5px}
+.book-cell input,.book-cell select{background:transparent;border:none;outline:none;color:var(--navy);font-family:inherit;font-size:.9rem;width:100%;font-weight:500}
+.book-cell input::-webkit-calendar-picker-indicator{opacity:.6;filter:sepia(1) hue-rotate(0deg) saturate(2)}
+.book-cell select option{background:#fff;color:var(--navy)}
+.book-bar .btn{border-radius:100px;padding:16px 30px;margin:4px}
+
+/* ===== WHATSAPP SENDING TOAST ===== */
+.wa-toast{
+  position:fixed;bottom:110px;left:50%;transform:translateX(-50%) translateY(120%);
+  background:linear-gradient(135deg,var(--wa),var(--wa-2));
+  color:#fff;padding:14px 24px;border-radius:100px;
+  display:flex;align-items:center;gap:12px;
+  font-size:.9rem;font-weight:600;
+  box-shadow:0 16px 40px rgba(37,211,102,.4);
+  z-index:10001;pointer-events:none;
+  transition:transform .5s var(--ease);
+  white-space:nowrap;
+}
+.wa-toast.show{transform:translateX(-50%) translateY(0)}
+.wa-toast i{font-size:1.2rem}
+.wa-toast.error{background:linear-gradient(135deg,#e8455c,#c72c44);box-shadow:0 16px 40px rgba(232,69,92,.4)}
+
+@media (max-width:640px){
+  .wa-toast{font-size:.82rem;padding:12px 18px;bottom:100px;white-space:normal;text-align:center;max-width:90%}
+}
+
+/* ===== MARQUEE ===== */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0;overflow:hidden;background:linear-gradient(180deg,var(--surface-2),var(--bg-2));display:flex;gap:0;white-space:nowrap}
+.marquee-track{display:flex;gap:60px;animation:scrollX 38s linear infinite;padding-right:60px}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-item{display:flex;align-items:center;gap:60px;font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.2vw,1.7rem);color:rgba(15,34,56,.32);letter-spacing:.5px;flex-shrink:0}
+.marquee-item i{color:var(--gold);font-size:.6em}
+@keyframes scrollX{to{transform:translateX(-50%)}}
+
+/* ===== REVEAL ===== */
+.reveal{opacity:0;transform:translateY(45px);transition:opacity 1s var(--ease-out),transform 1s var(--ease-out);transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+.reveal-left{opacity:0;transform:translateX(-60px)}
+.reveal-left.in{opacity:1;transform:none;transition:all 1.1s var(--ease-out)}
+.reveal-right{opacity:0;transform:translateX(60px)}
+.reveal-right.in{opacity:1;transform:none;transition:all 1.1s var(--ease-out)}
+
+/* ===== SECTION ===== */
+.section{padding:130px 0;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold-3);font-weight:700;margin-bottom:22px}
+.eyebrow::before{content:'';width:34px;height:1.5px;background:var(--gold)}
+.h2{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.1;letter-spacing:-.01em;color:var(--navy)}
+.h2 em{font-style:italic;color:var(--gold-3)}
+.lead{color:var(--muted);font-size:1.02rem;font-weight:400;max-width:560px}
+
+/* ===== ABOUT ===== */
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center}
+.about-visual{position:relative;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:16px;height:560px}
+.bento{border-radius:var(--r);overflow:hidden;position:relative;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow-sm)}
+.bento img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.bento:hover img{transform:scale(1.08)}
+.bento:nth-child(1){grid-column:span 2}
+.bento-glass{display:grid;place-items:center;text-align:center;padding:20px;background:linear-gradient(135deg,var(--gold-soft),#fff);border:1px solid rgba(184,135,58,.22)}
+.bento-glass .num{font-family:'Playfair Display',serif;font-size:2.6rem;color:var(--gold-3);line-height:1}
+.bento-glass .lbl{font-size:.7rem;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);margin-top:8px;font-weight:600}
+.about-text p{color:var(--muted);margin:22px 0;font-weight:400}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;padding-top:36px;border-top:1px solid var(--line)}
+.stat-row .num{font-family:'Playfair Display',serif;font-size:2.3rem;color:var(--navy);line-height:1}
+.stat-row .lbl{font-size:.72rem;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin-top:8px;font-weight:600}
+
+/* ===== ROOMS ===== */
+.rooms-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:60px;flex-wrap:wrap}
+.rooms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.room{position:relative;border-radius:var(--r);overflow:hidden;background:var(--surface);border:1px solid var(--line);transition:transform .6s var(--ease),border-color .5s,box-shadow .6s;box-shadow:var(--shadow-sm)}
+.room:hover{border-color:rgba(184,135,58,.4);box-shadow:var(--shadow-lg)}
+.room-media{position:relative;height:300px;overflow:hidden}
+.room-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.room:hover .room-media img{transform:scale(1.1)}
+.room-media::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(15,34,56,.4))}
+.room-tag{position:absolute;top:18px;left:18px;z-index:2;padding:7px 15px;border-radius:100px;font-size:.68rem;letter-spacing:1.4px;text-transform:uppercase;font-weight:700;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border:1px solid rgba(184,135,58,.3);color:var(--gold-3)}
+.room-body{padding:26px}
+.room-body h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:500;color:var(--navy);margin-bottom:8px}
+.room-body p{color:var(--muted);font-size:.9rem;margin-bottom:20px;font-weight:400}
+.room-feats{display:flex;gap:16px;flex-wrap:wrap;padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:20px}
+.room-feats span{font-size:.76rem;color:var(--muted);display:flex;align-items:center;gap:7px}
+.room-feats i{color:var(--gold);font-size:.85rem}
+.room-foot{display:flex;justify-content:space-between;align-items:center}
+.room-price{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--navy)}
+.room-price small{font-family:'Inter';font-size:.72rem;color:var(--muted);font-weight:400}
+.room-link{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--line-2);color:var(--gold-3);transition:all .4s var(--ease)}
+.room-link:hover{background:var(--gold);color:#fff;border-color:var(--gold);transform:rotate(-45deg)}
+
+/* ===== AMENITIES ===== */
+.amen{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%)}
+.amen-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:170px;gap:18px}
+.amen-card{border-radius:var(--r);padding:28px;position:relative;overflow:hidden;border:1px solid var(--line);background:var(--surface);display:flex;flex-direction:column;justify-content:space-between;transition:transform .5s var(--ease),border-color .5s,box-shadow .5s;box-shadow:var(--shadow-sm)}
+.amen-card::before{content:'';position:absolute;inset:0;opacity:0;transition:opacity .6s;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(212,162,77,.14),transparent 60%)}
+.amen-card:hover{transform:translateY(-6px);border-color:rgba(184,135,58,.35);box-shadow:var(--shadow)}
+.amen-card:hover::before{opacity:1}
+.amen-card i{font-size:1.7rem;color:var(--gold-3);position:relative;z-index:1;transition:transform .5s var(--ease)}
+.amen-card:hover i{transform:scale(1.15) rotate(-6deg)}
+.amen-card h3{font-size:1rem;font-weight:600;color:var(--navy);position:relative;z-index:1}
+.amen-card p{font-size:.82rem;color:var(--muted);position:relative;z-index:1;font-weight:400}
+.amen-card.big{grid-column:span 3;grid-row:span 2;padding:36px}
+.amen-card.big i{font-size:2.4rem}
+.amen-card.big h3{font-size:1.6rem;font-family:'Playfair Display',serif;font-weight:500;margin-top:auto}
+.amen-card.w2{grid-column:span 2}
+.amen-card.w3{grid-column:span 3}
+.amen-card.img-card{padding:0;justify-content:flex-end}
+.amen-card.img-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:transform 1.4s var(--ease)}
+.amen-card.img-card:hover img{transform:scale(1.08)}
+.amen-card.img-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(15,34,56,.75));z-index:0}
+.amen-card.img-card h3{position:relative;z-index:1;font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:500;color:#fff}
+.amen-card.img-card p{position:relative;z-index:1;color:rgba(255,255,255,.85)}
+
+/* ===== BOOK YOUR WAY ===== */
+.bookway{background:linear-gradient(180deg,var(--bg-2) 0%,var(--bg) 100%)}
+.platforms-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:20px}
+.platform{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:32px 20px;border-radius:var(--r);background:#fff;border:1px solid var(--line);transition:transform .5s var(--ease),box-shadow .5s,border-color .5s;text-align:center;position:relative;overflow:hidden;box-shadow:var(--shadow-sm)}
+.platform::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--brand,#ccc);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.platform:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent}
+.platform:hover::before{transform:scaleX(1)}
+.platform-logo{width:60px;height:60px;border-radius:16px;display:grid;place-items:center;color:#fff;font-size:1.6rem;font-weight:800;background:var(--brand,#666);box-shadow:0 8px 20px rgba(0,0,0,.12);transition:transform .5s var(--ease)}
+.platform:hover .platform-logo{transform:scale(1.08) rotate(-4deg)}
+.platform-name{font-size:.95rem;font-weight:700;color:var(--navy)}
+.platform-sub{font-size:.75rem;color:var(--muted);letter-spacing:.5px}
+.platform-arrow{font-size:.72rem;color:var(--brand,#666);font-weight:700;display:flex;align-items:center;gap:6px;letter-spacing:1px;text-transform:uppercase;transition:gap .3s}
+.platform:hover .platform-arrow{gap:12px}
+.platform.booking{--brand:#003580}
+.platform.agoda{--brand:#e8455c}
+.platform.expedia{--brand:#fbbd08;color:#1a2332}
+.platform.expedia .platform-logo{color:#1a2332}
+.platform.tripadvisor{--brand:#00af87}
+.platform.airbnb{--brand:#ff5a5f}
+.platform.whatsapp{--brand:#25d366}
+.platform.direct{--brand:var(--gold)}
+.platform.phone{--brand:#0f2238}
+
+.direct-banner{margin-top:50px;padding:36px 40px;border-radius:var(--r);background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.direct-banner::before{content:'';position:absolute;top:-50%;right:-10%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(212,162,77,.25),transparent 70%)}
+.direct-banner-text{position:relative;z-index:1;max-width:600px}
+.direct-banner-text h3{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:500;margin-bottom:8px}
+.direct-banner-text p{color:rgba(255,255,255,.75);font-size:.92rem}
+.direct-banner .btn{position:relative;z-index:1}
+
+/* ===== DINING ===== */
+.dining-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.dining-visual{position:relative;border-radius:var(--r);overflow:hidden;height:560px;border:1px solid var(--line);box-shadow:var(--shadow)}
+.dining-visual img{width:100%;height:100%;object-fit:cover;transition:transform 8s var(--ease)}
+.dining-visual:hover img{transform:scale(1.08)}
+.dining-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(15,34,56,.05) 0%,rgba(15,34,56,.45) 100%)}
+.dining-float{position:absolute;bottom:30px;left:30px;right:30px;z-index:2;padding:22px;border-radius:var(--r-sm);background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.6);display:flex;justify-content:space-between;align-items:center;gap:20px;box-shadow:0 12px 30px rgba(15,34,56,.15)}
+.dining-float h4{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--navy);font-weight:500}
+.dining-float p{font-size:.8rem;color:var(--muted);margin-top:3px}
+.dining-float .dot{width:8px;height:8px;border-radius:50%;background:#3fb950;box-shadow:0 0 12px #3fb950;flex-shrink:0}
+
+/* ===== TESTIMONIALS ===== */
+.testi-wrap{overflow:hidden}
+.testi-track{display:flex;gap:24px;transition:transform .8s var(--ease)}
+.testi{flex:0 0 calc(33.333% - 16px);padding:36px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);position:relative;box-shadow:var(--shadow-sm)}
+.testi .quote{font-family:'Playfair Display',serif;font-size:3rem;color:var(--gold-2);line-height:.6;opacity:.6}
+.testi p{color:var(--text);font-size:.95rem;font-weight:400;margin:18px 0 26px;font-style:italic;line-height:1.7}
+.testi-stars{color:var(--gold);font-size:.8rem;letter-spacing:2px;margin-bottom:12px}
+.testi-user{display:flex;align-items:center;gap:14px;border-top:1px solid var(--line);padding-top:22px}
+.testi-user img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid rgba(184,135,58,.35)}
+.testi-user h5{font-size:.9rem;color:var(--navy);font-weight:600}
+.testi-user span{font-size:.76rem;color:var(--muted)}
+.testi-nav{display:flex;gap:12px;justify-content:center;margin-top:44px}
+.testi-dot{width:34px;height:3px;border-radius:3px;background:rgba(15,34,56,.12);border:none;cursor:pointer;transition:all .4s var(--ease);padding:0}
+.testi-dot.active{background:var(--gold);width:60px}
+
+/* ===== LOCATION ===== */
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.loc-map{border-radius:var(--r);overflow:hidden;height:520px;border:1px solid var(--line);box-shadow:var(--shadow);filter:grayscale(.15) contrast(1.02);transition:filter .6s}
+.loc-map:hover{filter:grayscale(0) contrast(1)}
+.loc-map iframe{width:100%;height:100%;border:0}
+.loc-list{list-style:none;margin-top:36px}
+.loc-list li{display:flex;align-items:center;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);font-size:.94rem;transition:padding-left .4s var(--ease),color .3s;color:var(--text)}
+.loc-list li:hover{padding-left:12px;color:var(--navy)}
+.loc-list i{color:var(--gold);width:20px;font-size:.9rem}
+.loc-list .time{margin-left:auto;color:var(--gold-3);font-size:.82rem;font-weight:600}
+
+/* ===== CTA ===== */
+.cta{position:relative;padding:150px 0;overflow:hidden;text-align:center;background:url('https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=2400&q=80') center/cover fixed}
+.cta::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,252,246,.92),rgba(246,241,231,.9))}
+.cta-inner{position:relative;z-index:2;max-width:820px;margin:0 auto}
+.cta .h2{margin-bottom:20px}
+.cta p{color:var(--muted);font-size:1.05rem;font-weight:400;margin-bottom:40px}
+.cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* ===== FOOTER ===== */
+footer{background:var(--surface-2);padding:80px 0 30px;border-top:1px solid var(--line)}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:50px;margin-bottom:60px}
+.f-brand .logo{margin-bottom:20px}
+.f-brand p{color:var(--muted);font-size:.9rem;font-weight:400;margin-bottom:22px}
+.f-contact{list-style:none;margin-bottom:26px}
+.f-contact li{display:flex;align-items:center;gap:12px;font-size:.88rem;color:var(--muted);margin-bottom:10px}
+.f-contact i{color:var(--gold-3);width:16px}
+.f-social{display:flex;gap:12px}
+.f-social a{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--surface);border:1px solid var(--line);color:var(--muted);transition:all .4s var(--ease)}
+.f-social a:hover{background:var(--gold);color:#fff;border-color:var(--gold);transform:translateY(-4px);box-shadow:0 8px 20px rgba(184,135,58,.3)}
+.f-col h4{color:var(--navy);font-size:.95rem;margin-bottom:22px;font-weight:600}
+.f-col ul{list-style:none}
+.f-col li{margin-bottom:12px}
+.f-col a{color:var(--muted);font-size:.88rem;transition:color .3s,padding-left .3s;font-weight:400}
+.f-col a:hover{color:var(--gold-3);padding-left:6px}
+.f-news p{color:var(--muted);font-size:.85rem;margin-bottom:18px;font-weight:400}
+.f-news form{display:flex;gap:8px}
+.f-news input{flex:1;padding:13px 18px;border-radius:100px;border:1px solid var(--line-2);background:var(--surface);color:var(--text);font-family:inherit;font-size:.85rem;outline:none;transition:border .3s,box-shadow .3s}
+.f-news input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,135,58,.12)}
+.f-news input::placeholder{color:var(--muted-2)}
+.f-news button{width:46px;height:46px;border-radius:50%;border:none;flex-shrink:0;background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#fff;display:grid;place-items:center;transition:transform .3s;box-shadow:0 6px 18px rgba(184,135,58,.3)}
+.f-news button:hover{transform:scale(1.08) rotate(-12deg)}
+.f-bottom{border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:.82rem;color:var(--muted)}
+.f-bottom a{color:var(--muted);transition:color .3s}
+.f-bottom a:hover{color:var(--gold-3)}
+
+/* ===== FLOATING WHATSAPP ===== */
+.wa-float{position:fixed;bottom:30px;right:30px;z-index:9000;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--wa),var(--wa-2));color:#fff;display:grid;place-items:center;font-size:1.8rem;box-shadow:0 12px 30px rgba(37,211,102,.4);transition:transform .4s var(--ease),box-shadow .4s;cursor:none}
+@media (max-width:900px){.wa-float{cursor:pointer}}
+.wa-float::before{content:'';position:absolute;inset:0;border-radius:50%;background:var(--wa);animation:waPulse 2s ease-out infinite;z-index:-1}
+.wa-float::after{content:'';position:absolute;inset:0;border-radius:50%;background:var(--wa);animation:waPulse 2s ease-out infinite .5s;z-index:-1}
+@keyframes waPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.7);opacity:0}}
+.wa-float:hover{transform:scale(1.1) rotate(-6deg);box-shadow:0 16px 40px rgba(37,211,102,.55)}
+.wa-tooltip{position:absolute;right:calc(100% + 14px);top:50%;transform:translateY(-50%);background:var(--navy);color:#fff;padding:10px 16px;border-radius:100px;font-size:.82rem;font-weight:600;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;box-shadow:0 8px 20px rgba(15,34,56,.2)}
+.wa-tooltip::after{content:'';position:absolute;right:-6px;top:50%;transform:translateY(-50%) rotate(45deg);width:12px;height:12px;background:var(--navy)}
+.wa-float:hover .wa-tooltip{opacity:1;transform:translateY(-50%) translateX(-4px)}
+
+/* ===== FLOATING PLATFORM BAR ===== */
+.plat-float{position:fixed;left:20px;top:50%;transform:translateY(-50%);z-index:9000;display:flex;flex-direction:column;gap:10px;padding:12px;border-radius:100px;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border:1px solid var(--line);box-shadow:0 20px 50px rgba(15,34,56,.15);transition:transform .5s var(--ease)}
+.plat-float.hidden{transform:translateY(-50%) translateX(-120%)}
+.plat-float a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:.85rem;font-weight:800;transition:transform .4s var(--ease),box-shadow .4s;position:relative}
+.plat-float a:hover{transform:scale(1.15) translateX(4px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.plat-float a::after{content:attr(data-tip);position:absolute;left:calc(100% + 12px);top:50%;transform:translateY(-50%);background:var(--navy);color:#fff;padding:6px 12px;border-radius:100px;font-size:.72rem;font-weight:600;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .3s}
+.plat-float a:hover::after{opacity:1}
+.plat-float .pf-booking{background:#003580}
+.plat-float .pf-agoda{background:#e8455c}
+.plat-float .pf-expedia{background:#fbbd08;color:#1a2332}
+.plat-float .pf-tripadvisor{background:#00af87}
+.plat-float .pf-airbnb{background:#ff5a5f}
+.plat-float-toggle{position:fixed;left:20px;top:50%;transform:translateY(-50%);z-index:8999;width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;border:none;display:grid;place-items:center;font-size:.8rem;box-shadow:0 8px 20px rgba(15,34,56,.25);cursor:none;transition:transform .3s}
+@media (max-width:900px){.plat-float-toggle{cursor:pointer}}
+.plat-float-toggle:hover{transform:translateY(-50%) scale(1.1)}
+
+/* ===== MOBILE CTA ===== */
+.mobile-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);border-top:1px solid var(--line);padding:12px 14px;align-items:center;justify-content:space-between;gap:10px;box-shadow:0 -4px 24px rgba(15,34,56,.06)}
+.mobile-cta .btn{padding:11px 18px;font-size:.78rem;flex:1;justify-content:center}
+.mobile-cta span{display:none}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:1100px){
+  .amen-grid{grid-template-columns:repeat(4,1fr)}
+  .amen-card.big{grid-column:span 2}
+  .amen-card.w3{grid-column:span 2}
+  .platforms-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:992px){
+  .nav-links{position:fixed;top:0;right:0;height:100vh;width:min(320px,85%);flex-direction:column;justify-content:center;gap:28px;text-align:center;background:rgba(253,252,249,.98);backdrop-filter:blur(30px);transform:translateX(100%);transition:transform .5s var(--ease);border-left:1px solid var(--line);box-shadow:-20px 0 60px rgba(15,34,56,.08)}
+  .nav-links.open{transform:none}
+  .nav-links a{font-size:1.1rem;color:var(--text) !important;text-shadow:none !important}
+  .nav-links a:hover{color:var(--gold-3) !important}
+  .burger{display:block;z-index:1001}
+  .nav-tel{display:none}
+  .about-grid,.dining-grid,.loc-grid{grid-template-columns:1fr;gap:60px}
+  .about-visual{height:460px}
+  .rooms-grid{grid-template-columns:repeat(2,1fr)}
+  .testi{flex:0 0 calc(50% - 12px)}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .book-bar{grid-template-columns:repeat(2,1fr);border-radius:24px;padding:14px}
+  .book-cell::after{display:none}
+  .book-cell{border-bottom:1px solid var(--line)}
+  .book-cell:nth-last-child(2){border-bottom:none}
+  .book-bar .btn{grid-column:span 2;border-radius:100px;margin:6px 0 0}
+  .section{padding:90px 0}
+  .plat-float,.plat-float-toggle{display:none}
+}
+@media (max-width:640px){
+  .hero{padding:130px 0 70px}
+  .rooms-grid,.amen-grid{grid-template-columns:1fr}
+  .amen-grid{grid-auto-rows:auto}
+  .amen-card{min-height:150px;grid-column:span 1 !important;grid-row:span 1 !important}
+  .amen-card.big{grid-row:span 1 !important;min-height:220px}
+  .testi{flex:0 0 100%}
+  .f-grid{grid-template-columns:1fr}
+  .about-visual{height:380px;gap:12px}
+  .stat-row{grid-template-columns:1fr;gap:20px}
+  .dining-visual{height:400px}
+  .loc-map{height:340px}
+  .mobile-cta{display:flex}
+  body{padding-bottom:76px}
+  .f-bottom{flex-direction:column;text-align:center}
+  .nav-right .btn{display:none}
+  .platforms-grid{grid-template-columns:1fr}
+  .direct-banner{padding:28px 22px;flex-direction:column;text-align:center}
+  .wa-float{bottom:90px;right:20px;width:56px;height:56px;font-size:1.5rem}
+  .wa-tooltip{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+  <div class="pre-logo">
+    <span>S</span><span>h</span><span>a</span><span>r</span><span>j</span><span>a</span><span>h</span>&nbsp;<span style="color:var(--gold)">P</span><span style="color:var(--gold)">a</span><span style="color:var(--gold)">l</span><span style="color:var(--gold)">a</span><span style="color:var(--gold)">c</span><span style="color:var(--gold)">e</span>&nbsp;<span style="color:var(--gold)">H</span><span style="color:var(--gold)">o</span><span style="color:var(--gold)">t</span><span style="color:var(--gold)">e</span><span style="color:var(--gold)">l</span>
+  </div>
+  <div class="pre-bar"></div>
+</div>
+
+<!-- PROGRESS -->
+<div class="progress" id="progress"></div>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- WHATSAPP TOAST -->
+<div class="wa-toast" id="waToast">
+  <i class="fab fa-whatsapp"></i>
+  <span id="waToastText">Opening WhatsApp…</span>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container nav">
+    <a href="#home" class="logo">
+      <img src="logo.png" style="width: 200px; height: auto;" alt="Sharjah Palace Hotel">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#rooms">Rooms</a></li>
+      <li><a href="#amenities">Amenities</a></li>
+      <li><a href="#bookway">Book</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:+97165939333" class="nav-tel"><i class="fas fa-phone"></i> +971 6 5939 333</a>
+      <a href="https://wa.me/971600000000?text=Hello%20Sharjah%20Palace%20Hotel%2C%20I%27d%20like%20to%20make%20a%20booking" target="_blank" rel="noopener" class="btn btn-sm btn-wa" data-magnetic><span><i class="fab fa-whatsapp"></i> WhatsApp</span></a>
+      <button class="burger" id="burger" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <!-- VPIX 360° Tour embedded as hero background -->
+  <div class="hero-bg" id="heroBg">
+    <iframe
+      class="hero-embed"
+      src="https://www.vpix.net/index.php?tour=4438"
+      title="Sharjah Palace Hotel 360° Virtual Tour"
+      frameborder="0"
+      allowfullscreen
+      allow="fullscreen; accelerometer; gyroscope; magnetometer"
+      loading="eager"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+  <div class="hero-vignette"></div>
+  <div class="hero-glow"></div>
+
+  <div class="container hero-inner">
+    <div class="hero-badge reveal" style="--d:.2s"><i class="fas fa-crown"></i> 4-Star Luxury · Sharjah, UAE</div>
+    <h1 class="reveal" style="--d:.35s">Where Arabian Heritage<br>Meets <em>Modern Elegance</em></h1>
+    <p class="reveal" style="--d:.5s">Nestled in the heart of Al Taawun, Sharjah Palace Hotel redefines 4-star hospitality with timeless design, curated experiences, and effortless access to the city's finest destinations.</p>
+
+    <div class="reveal" style="--d:.55s">
+      <a href="https://www.vpix.net/index.php?tour=4438"
+         target="_blank"
+         rel="noopener"
+         class="tour-launch-btn">
+        <span class="tour-icon"><i class="fas fa-vr-cardboard"></i></span>
+        <span class="tour-text">
+          <strong>Explore Our 360° Virtual Tour</strong>
+          <small>Walk through the hotel before you book</small>
+        </span>
+        <span class="tour-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+      </a>
+    </div>
+
+    <div class="book-bar reveal" style="--d:.65s" id="booking">
+      <div class="book-cell">
+        <label>Check-in</label>
+        <input type="date" id="checkin" name="checkin">
+      </div>
+      <div class="book-cell">
+        <label>Check-out</label>
+        <input type="date" id="checkout" name="checkout">
+      </div>
+      <div class="book-cell">
+        <label>Guests</label>
+        <select id="guests" name="guests">
+          <option value="1 Adult">1 Adult</option>
+          <option value="2 Adults" selected>2 Adults</option>
+          <option value="2 Adults, 1 Child">2 Adults, 1 Child</option>
+          <option value="2 Adults, 2 Children">2 Adults, 2 Children</option>
+          <option value="3 Adults">3 Adults</option>
+          <option value="4 Adults">4 Adults</option>
+        </select>
+      </div>
+      <div class="book-cell">
+        <label>Rooms</label>
+        <select id="rooms" name="rooms">
+          <option value="1 Room" selected>1 Room</option>
+          <option value="2 Rooms">2 Rooms</option>
+          <option value="3 Rooms">3 Rooms</option>
+          <option value="4 Rooms">4 Rooms</option>
+        </select>
+      </div>
+      <button class="btn" id="bookBtn" data-magnetic><span><i class="fas fa-search"></i> Check Availability</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <div class="marquee-item"><span>Best Rate Guarantee</span><i class="fas fa-diamond"></i><span>Rooftop Pool</span><i class="fas fa-diamond"></i><span>Free Cancellation</span><i class="fas fa-diamond"></i><span>Fine Dining</span><i class="fas fa-diamond"></i><span>Spa & Wellness</span><i class="fas fa-diamond"></i></div>
+    <div class="marquee-item"><span>Best Rate Guarantee</span><i class="fas fa-diamond"></i><span>Rooftop Pool</span><i class="fas fa-diamond"></i><span>Free Cancellation</span><i class="fas fa-diamond"></i><span>Fine Dining</span><i class="fas fa-diamond"></i><span>Spa & Wellness</span><i class="fas fa-diamond"></i></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="about-visual reveal-left">
+      <div class="bento"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80" alt="Hotel exterior" loading="lazy"></div>
+      <div class="bento"><img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=800&q=80" alt="Pool" loading="lazy"></div>
+      <div class="bento bento-glass">
+        <div>
+          <div class="num" data-count="120" data-suffix="+">0</div>
+          <div class="lbl">Rooms & Suites</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-text reveal-right">
+      <div class="eyebrow">About the Hotel</div>
+      <h2 class="h2">A Sanctuary of <em>Refined Comfort</em></h2>
+      <p>Sharjah Palace Hotel stands as a landmark of contemporary Arabian hospitality. Every detail — from the warm tones of our lobby to the careful craftsmanship of our suites — has been designed to make your stay effortless and memorable.</p>
+      <p>Whether you are here for business at the Expo Centre or a family escape to the lagoon, our team ensures a seamless experience with 24-hour service, curated dining, and thoughtful amenities.</p>
+      <div class="stat-row">
+        <div><div class="num" data-count="4" data-suffix="★">0</div><div class="lbl">Star Rating</div></div>
+        <div><div class="num" data-count="24" data-suffix="/7">0</div><div class="lbl">Concierge</div></div>
+        <div><div class="num" data-count="15" data-suffix="+">0</div><div class="lbl">Years of Service</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACCOMMODATION / ROOMS ===== -->
+<section class="section" id="rooms" style="background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%)">
+  <div class="container">
+    <div class="rooms-head">
+      <div class="reveal">
+        <div class="eyebrow">Accommodation</div>
+        <h2 class="h2">Rooms & <em>Suites</em></h2>
+      </div>
+      <p class="lead reveal" style="--d:.15s">Each room is a private retreat — thoughtfully appointed with premium linens, curated minibars, and views over Sharjah's skyline.</p>
+    </div>
+
+    <div class="rooms-grid">
+      <article class="room reveal" style="--d:.05s">
+        <div class="room-media">
+          <span class="room-tag">Most Popular</span>
+          <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80" alt="Deluxe Room" loading="lazy">
+        </div>
+        <div class="room-body">
+          <h3>Deluxe Room</h3>
+          <p>Refined comfort with city views, king or twin beds, and a serene seating corner.</p>
+          <div class="room-feats">
+            <span><i class="fas fa-wifi"></i> Wi-Fi</span>
+            <span><i class="fas fa-tv"></i> Smart TV</span>
+            <span><i class="fas fa-snowflake"></i> A/C</span>
+          </div>
+          <div class="room-foot">
+            <div class="room-price">AED 350 <small>/ night</small></div>
+            <a href="#booking" class="room-link" aria-label="Book Deluxe Room"><i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="room reveal" style="--d:.15s">
+        <div class="room-media">
+          <span class="room-tag">Signature</span>
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80" alt="Executive Suite" loading="lazy">
+        </div>
+        <div class="room-body">
+          <h3>Executive Suite</h3>
+          <p>An expansive suite with a separate living room, marble bath, and panoramic skyline views.</p>
+          <div class="room-feats">
+            <span><i class="fas fa-wifi"></i> Wi-Fi</span>
+            <span><i class="fas fa-bath"></i> Bathtub</span>
+            <span><i class="fas fa-couch"></i> Living Area</span>
+          </div>
+          <div class="room-foot">
+            <div class="room-price">AED 550 <small>/ night</small></div>
+            <a href="#booking" class="room-link" aria-label="Book Executive Suite"><i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="room reveal" style="--d:.25s">
+        <div class="room-media">
+          <span class="room-tag">Family</span>
+          <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=900&q=80" alt="Family Room" loading="lazy">
+        </div>
+        <div class="room-body">
+          <h3>Family Room</h3>
+          <p>Generous space for up to four guests with child-friendly amenities and cosy interiors.</p>
+          <div class="room-feats">
+            <span><i class="fas fa-wifi"></i> Wi-Fi</span>
+            <span><i class="fas fa-users"></i> Sleeps 4</span>
+            <span><i class="fas fa-utensils"></i> Mini Bar</span>
+          </div>
+          <div class="room-foot">
+            <div class="room-price">AED 450 <small>/ night</small></div>
+            <a href="#booking" class="room-link" aria-label="Book Family Room"><i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section class="section amen" id="amenities">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:70px" class="reveal">
+      <div class="eyebrow" style="justify-content:center">Facilities</div>
+      <h2 class="h2">Curated <em>Experiences</em></h2>
+    </div>
+
+    <div class="amen-grid">
+      <div class="amen-card big img-card reveal" style="--d:.05s">
+        <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1200&q=80" alt="Pool" loading="lazy">
+        <h3>Indoor & Outdoor Pools</h3>
+        <p>Temperature-controlled pools with lounge decks and poolside service.</p>
+      </div>
+      <div class="amen-card w2 reveal" style="--d:.1s"><i class="fas fa-dumbbell"></i><div><h3>Fitness Centre</h3><p>Cardio & strength equipment.</p></div></div>
+      <div class="amen-card w2 reveal" style="--d:.15s"><i class="fas fa-spa"></i><div><h3>Spa & Wellness</h3><p>Massage & beauty rituals.</p></div></div>
+      <div class="amen-card w2 reveal" style="--d:.2s"><i class="fas fa-car-side"></i><div><h3>Car-Themed Game Room</h3><p>Racing simulators for all ages.</p></div></div>
+      <div class="amen-card w3 reveal" style="--d:.25s"><i class="fas fa-utensils"></i><div><h3>Restaurant & Café</h3><p>Local & international cuisine served all day, with 24-hour room service.</p></div></div>
+      <div class="amen-card w3 reveal" style="--d:.3s"><i class="fas fa-briefcase"></i><div><h3>Business & Events</h3><p>Meeting rooms, business centre, and complimentary high-speed Wi-Fi throughout.</p></div></div>
+      <div class="amen-card w2 reveal" style="--d:.35s"><i class="fas fa-parking"></i><div><h3>Free Parking</h3><p>On-site valet & self-parking.</p></div></div>
+      <div class="amen-card w2 reveal" style="--d:.4s"><i class="fas fa-concierge-bell"></i><div><h3>24/7 Concierge</h3><p>Always at your service.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK YOUR WAY -->
+<section class="section bookway" id="bookway">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:50px" class="reveal">
+      <div class="eyebrow" style="justify-content:center">Reservations</div>
+      <h2 class="h2">Book Your Way — <em>Your Choice</em></h2>
+      <p class="lead" style="margin:20px auto 0;text-align:center">Reserve directly with us for the best rates, or through your favourite travel platform. WhatsApp us for instant assistance.</p>
+    </div>
+
+    <div class="platforms-grid">
+      <a href="https://www.booking.com/hotel/ae/sharjah-palace.html" target="_blank" rel="noopener" class="platform booking reveal" style="--d:.05s">
+        <div class="platform-logo">B.</div>
+        <div class="platform-name">Booking.com</div>
+        <div class="platform-sub">Worldwide bookings</div>
+        <div class="platform-arrow">Book Now <i class="fas fa-arrow-right"></i></div>
+      </a>
+      <a href="https://www.agoda.com/sharjah-palace-hotel" target="_blank" rel="noopener" class="platform agoda reveal" style="--d:.1s">
+        <div class="platform-logo">A</div>
+        <div class="platform-name">Agoda</div>
+        <div class="platform-sub">Asia's leading platform</div>
+        <div class="platform-arrow">Book Now <i class="fas fa-arrow-right"></i></div>
+      </a>
+      <a href="https://www.expedia.com/Sharjah-Hotels-Sharjah-Palace-Hotel" target="_blank" rel="noopener" class="platform expedia reveal" style="--d:.15s">
+        <div class="platform-logo">E</div>
+        <div class="platform-name">Expedia</div>
+        <div class="platform-sub">Global travel network</div>
+        <div class="platform-arrow">Book Now <i class="fas fa-arrow-right"></i></div>
+      </a>
+      <a href="https://www.tripadvisor.com/Hotel_Review-Sharjah_Palace_Hotel" target="_blank" rel="noopener" class="platform tripadvisor reveal" style="--d:.2s">
+        <div class="platform-logo">TA</div>
+        <div class="platform-name">TripAdvisor</div>
+        <div class="platform-sub">Rated by travellers</div>
+        <div class="platform-arrow">View & Book <i class="fas fa-arrow-right"></i></div>
+      </a>
+      <a href="https://www.airbnb.com/rooms/sharjah-palace-hotel" target="_blank" rel="noopener" class="platform airbnb reveal" style="--d:.25s">
+        <div class="platform-logo"><i class="fab fa-airbnb"></i></div>
+        <div class="platform-name">Airbnb</div>
+        <div class="platform-sub">Unique stays</div>
+        <div class="platform-arrow">Book Now <i class="fas fa-arrow-right"></i></div>
+      </a>
+      <a href="https://wa.me/971600000000?text=Hello%20Sharjah%20Palace%20Hotel%2C%20I%27d%20like%20to%20make%20a%20booking" target="_blank" rel="noopener" class="platform whatsapp reveal" style="--d:.3s">
+        <div class="platform-logo"><i class="fab fa-whatsapp"></i></div>
+        <div class="platform-name">WhatsApp</div>
+        <div class="platform-sub">Instant chat & booking</div>
+        <div class="platform-arrow">Chat Now <i class="fas fa-arrow-right"></i></div>
+      </a>
+      <a href="tel:+971600000000" class="platform phone reveal" style="--d:.35s">
+        <div class="platform-logo"><i class="fas fa-phone"></i></div>
+        <div class="platform-name">Call Us</div>
+        <div class="platform-sub">+971 6 000 0000</div>
+        <div class="platform-arrow">Call Now <i class="fas fa-arrow-right"></i></div>
+      </a>
+      <a href="#booking" class="platform direct reveal" style="--d:.4s">
+        <div class="platform-logo"><i class="fas fa-crown"></i></div>
+        <div class="platform-name">Direct Booking</div>
+        <div class="platform-sub">Best rate guarantee</div>
+        <div class="platform-arrow">Book Direct <i class="fas fa-arrow-right"></i></div>
+      </a>
+    </div>
+
+    <div class="direct-banner reveal" style="--d:.45s">
+      <div class="direct-banner-text">
+        <h3>Get the Best Rate — Book Direct</h3>
+        <p>Exclusive discounts, free cancellation, and loyalty benefits when you book directly with us.</p>
+      </div>
+      <a href="https://wa.me/971600000000?text=Hello%20Sharjah%20Palace%20Hotel%2C%20I%27d%20like%20to%20make%20a%20booking" target="_blank" rel="noopener" class="btn btn-wa" data-magnetic><span><i class="fab fa-whatsapp"></i> WhatsApp Us</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- DINING -->
+<section class="section" id="dining">
+  <div class="container dining-grid">
+    <div class="dining-visual reveal-left">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80" alt="Restaurant" loading="lazy">
+      <div class="dining-float">
+        <div>
+          <h4>Open Daily</h4>
+          <p>Breakfast · Lunch · Dinner</p>
+        </div>
+        <div class="dot"></div>
+      </div>
+    </div>
+    <div class="reveal-right">
+      <div class="eyebrow">Gastronomy</div>
+      <h2 class="h2">A Taste of the <em>Orient</em></h2>
+      <p class="lead" style="margin-top:24px">Begin your morning with an opulent breakfast buffet featuring Middle Eastern and international favourites. Our chefs source the finest local and imported ingredients to craft dishes that celebrate the region's flavours.</p>
+      <p class="lead" style="margin-top:20px">In the evening, retreat to our lounge for hand-picked teas, specialty coffees, and light bites — or enjoy a private dinner served in the comfort of your suite.</p>
+      <div style="display:flex;gap:16px;margin-top:40px;flex-wrap:wrap">
+        <a href="https://wa.me/971600000000?text=Hello%2C%20I%27d%20like%20to%20reserve%20a%20table%20at%20Sharjah%20Palace%20Hotel" target="_blank" rel="noopener" class="btn btn-wa" data-magnetic><span><i class="fab fa-whatsapp"></i> Reserve via WhatsApp</span></a>
+        <a href="#rooms" class="btn btn-ghost" data-magnetic><span>View Menu</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" style="background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%)">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:60px" class="reveal">
+      <div class="eyebrow" style="justify-content:center">Guest Stories</div>
+      <h2 class="h2">Loved by <em>Travellers</em></h2>
+    </div>
+
+    <div class="testi-wrap">
+      <div class="testi-track" id="testiTrack">
+        <div class="testi">
+          <div class="quote">"</div>
+          <div class="testi-stars">★★★★★</div>
+          <p>Excellent location for Sharjah Expo Centre. The staff were incredibly welcoming and the room felt more like a 5-star suite. Booking direct was seamless.</p>
+          <div class="testi-user">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ahmed">
+            <div><h5>Ahmed K.</h5><span>Business Traveller</span></div>
+          </div>
+        </div>
+        <div class="testi">
+          <div class="quote">"</div>
+          <div class="testi-stars">★★★★★</div>
+          <p>The kids adored the car-themed game room and the pool. Genuinely one of the best value family stays we've had in the UAE. We'll be back.</p>
+          <div class="testi-user">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah">
+            <div><h5>Sarah M.</h5><span>Family Holiday</span></div>
+          </div>
+        </div>
+        <div class="testi">
+          <div class="quote">"</div>
+          <div class="testi-stars">★★★★★</div>
+          <p>Convenient location, superb breakfast, and a genuinely friendly team. The direct booking perks made it an easy decision.</p>
+          <div class="testi-user">
+            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Rahul">
+            <div><h5>Rahul S.</h5><span>Leisure Stay</span></div>
+          </div>
+        </div>
+        <div class="testi">
+          <div class="quote">"</div>
+          <div class="testi-stars">★★★★★</div>
+          <p>Beautiful interiors, spotless rooms, and a location that puts everything within reach. The spa was a wonderful surprise.</p>
+          <div class="testi-user">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Layla">
+            <div><h5>Layla H.</h5><span>Weekend Escape</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-nav" id="testiNav"></div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="section" id="location">
+  <div class="container loc-grid">
+    <div class="reveal-left">
+      <div class="eyebrow">Location</div>
+      <h2 class="h2">At the Centre of <em>Everything</em></h2>
+      <p class="lead" style="margin-top:24px">Perfectly positioned on Al Taawun Street, Sharjah Palace Hotel places you minutes from the emirate's most important business, shopping, and leisure destinations.</p>
+
+      <ul class="loc-list">
+        <li><i class="fas fa-map-marker-alt"></i> Sharjah Expo Centre <span class="time">5 min</span></li>
+        <li><i class="fas fa-map-marker-alt"></i> Al Mamzar Lagoon <span class="time">7 min</span></li>
+        <li><i class="fas fa-map-marker-alt"></i> Sahara Centre <span class="time">10 min</span></li>
+        <li><i class="fas fa-map-marker-alt"></i> Sharjah Int'l Airport <span class="time">20 min</span></li>
+        <li><i class="fas fa-map-marker-alt"></i> Dubai Int'l Airport <span class="time">25 min</span></li>
+      </ul>
+
+      <a href="https://maps.google.com/?q=Sharjah+Palace+Hotel" target="_blank" rel="noopener" class="btn" style="margin-top:36px" data-magnetic><span>Get Directions <i class="fas fa-arrow-up-right-from-square"></i></span></a>
+    </div>
+
+    <div class="loc-map reveal-right">
+      <iframe src="https://www.google.com/maps?q=Sharjah%20Palace%20Hotel&output=embed" allowfullscreen loading="lazy" title="Map"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container cta-inner">
+    <div class="eyebrow reveal" style="justify-content:center">Reserve Your Stay</div>
+    <h2 class="h2 reveal" style="--d:.1s">Your Palace <em>Awaits</em></h2>
+    <p class="reveal" style="--d:.2s">Book directly with us for the best rates, exclusive benefits, and flexible cancellation. Your perfect Sharjah escape starts here.</p>
+    <div class="cta-buttons reveal" style="--d:.3s">
+      <a href="#booking" class="btn" data-magnetic><span><i class="fas fa-calendar-check"></i> Book Your Stay</span></a>
+      <a href="https://wa.me/971600000000?text=Hello%20Sharjah%20Palace%20Hotel%2C%20I%27d%20like%20to%20make%20a%20booking" target="_blank" rel="noopener" class="btn btn-wa" data-magnetic><span><i class="fab fa-whatsapp"></i> Chat on WhatsApp</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="container">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a href="#home" class="logo"><span class="logo-mark">SP</span> Sharjah <b>Palace</b></a>
+        <p>Modern Arabian hospitality in the heart of Sharjah. Elegant rooms, curated experiences, and warm service — every stay, unforgettable.</p>
+        <ul class="f-contact">
+          <li><i class="fas fa-location-dot"></i> Al Taawun Street, Sharjah, UAE</li>
+          <li><i class="fas fa-phone"></i> +971 6 000 0000</li>
+          <li><i class="fas fa-envelope"></i> reservations@sharjahpalacehotel.com</li>
+        </ul>
+        <div class="f-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+        </div>
+      </div>
+
+      <div class="f-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#rooms">Rooms & Suites</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#dining">Dining</a></li>
+        </ul>
+      </div>
+
+      <div class="f-col">
+        <h4>Guest Services</h4>
+        <ul>
+          <li><a href="#bookway">Book Now</a></li>
+          <li><a href="https://wa.me/971600000000" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="f-col f-news">
+        <h4>Newsletter</h4>
+        <p>Subscribe for exclusive offers, seasonal packages, and news from Sharjah Palace.</p>
+        <form onsubmit="event.preventDefault();this.querySelector('input').value='';this.querySelector('button').innerHTML='<i class=\'fas fa-check\'></i>';">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" aria-label="Subscribe"><i class="fas fa-arrow-right"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="f-bottom">
+      <p>© 2026 Sharjah Palace Hotel. All rights reserved.</p>
+      <p>Crafted for direct bookings · <a href="#">Terms</a> · <a href="#">Privacy</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING PLATFORM BAR -->
+<button class="plat-float-toggle" id="platToggle" aria-label="Toggle booking platforms"><i class="fas fa-chevron-left"></i></button>
+<div class="plat-float" id="platFloat">
+  <a href="https://www.booking.com/hotel/ae/sharjah-palace.html" target="_blank" rel="noopener" class="pf-booking" data-tip="Booking.com" aria-label="Booking.com">B.</a>
+  <a href="https://www.agoda.com/sharjah-palace-hotel" target="_blank" rel="noopener" class="pf-agoda" data-tip="Agoda" aria-label="Agoda">A</a>
+  <a href="https://www.expedia.com/Sharjah-Hotels-Sharjah-Palace-Hotel" target="_blank" rel="noopener" class="pf-expedia" data-tip="Expedia" aria-label="Expedia">E</a>
+  <a href="https://www.tripadvisor.com/Hotel_Review-Sharjah_Palace_Hotel" target="_blank" rel="noopener" class="pf-tripadvisor" data-tip="TripAdvisor" aria-label="TripAdvisor"><i class="fas fa-star"></i></a>
+  <a href="https://www.airbnb.com/rooms/sharjah-palace-hotel" target="_blank" rel="noopener" class="pf-airbnb" data-tip="Airbnb" aria-label="Airbnb"><i class="fab fa-airbnb"></i></a>
+</div>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/971600000000?text=Hello%20Sharjah%20Palace%20Hotel%2C%20I%27d%20like%20to%20make%20a%20booking" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="wa-tooltip">Chat with us on WhatsApp</span>
+</a>
+
+<!-- MOBILE CTA -->
+<div class="mobile-cta">
+  <a href="https://wa.me/971600000000?text=Hello%20Sharjah%20Palace%20Hotel" target="_blank" rel="noopener" class="btn btn-wa"><span><i class="fab fa-whatsapp"></i> WhatsApp</span></a>
+  <a href="#booking" class="btn"><span><i class="fas fa-calendar-check"></i> Book Now</span></a>
+</div>
+
+<script>
+/* ============ PRELOADER ============ */
+window.addEventListener('load', () => {
+  setTimeout(() => document.getElementById('preloader').classList.add('done'), 1700);
+});
+
+/* ============ CURSOR ============ */
+const cursor = document.getElementById('cursor');
+const dot = document.getElementById('cursorDot');
+let mx = 0, my = 0, cx = 0, cy = 0;
+if (window.matchMedia('(min-width:901px)').matches) {
+  window.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.transform = `translate(${mx}px,${my}px) translate(-50%,-50%)`;
+  });
+  const loop = () => {
+    cx += (mx - cx) * 0.16;
+    cy += (my - cy) * 0.16;
+    cursor.style.transform = `translate(${cx}px,${cy}px) translate(-50%,-50%)`;
+    requestAnimationFrame(loop);
+  };
+  loop();
+  document.querySelectorAll('a,button,.room,.amen-card,.testi,.platform,.tour-launch-btn').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+  });
+}
+
+/* ============ HEADER + PROGRESS ============ */
+/* NOTE: parallax removed — the hero background is now an embedded 360° tour iframe */
+const header = document.getElementById('header');
+const progress = document.getElementById('progress');
+let ticking = false;
+function onScroll() {
+  const y = window.scrollY;
+  header.classList.toggle('scrolled', y > 40);
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.width = (y / h * 100) + '%';
+  ticking = false;
+}
+window.addEventListener('scroll', () => {
+  if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
+}, { passive: true });
+onScroll();
+
+/* ============ MOBILE MENU ============ */
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+burger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  const i = burger.querySelector('i');
+  i.classList.toggle('fa-bars'); i.classList.toggle('fa-times');
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  navLinks.classList.remove('open');
+  const i = burger.querySelector('i');
+  i.classList.add('fa-bars'); i.classList.remove('fa-times');
+}));
+
+/* ============ FLOATING PLATFORM TOGGLE ============ */
+const platFloat = document.getElementById('platFloat');
+const platToggle = document.getElementById('platToggle');
+let platOpen = true;
+platToggle.addEventListener('click', () => {
+  platOpen = !platOpen;
+  platFloat.classList.toggle('hidden', !platOpen);
+  platToggle.querySelector('i').className = platOpen ? 'fas fa-chevron-left' : 'fas fa-chevron-right';
+});
+
+/* ============ REVEAL ============ */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      if (e.target.dataset.count) animateCount(e.target);
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right,[data-count]').forEach(el => io.observe(el));
+
+/* ============ COUNTERS ============ */
+function animateCount(el) {
+  const target = +el.dataset.count;
+  const suffix = el.dataset.suffix || '';
+  const dur = 1600; const start = performance.now();
+  const step = now => {
+    const p = Math.min((now - start) / dur, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(target * eased) + suffix;
+    if (p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+/* ============ BENTO GLOW ============ */
+document.querySelectorAll('.amen-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+    card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+  });
+});
+
+/* ============ 3D TILT ============ */
+document.querySelectorAll('.room').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    card.style.transform = `perspective(900px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateY(-8px)`;
+  });
+  card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+});
+
+/* ============ MAGNETIC ============ */
+document.querySelectorAll('[data-magnetic]').forEach(btn => {
+  btn.addEventListener('mousemove', e => {
+    const r = btn.getBoundingClientRect();
+    const x = e.clientX - r.left - r.width / 2;
+    const y = e.clientY - r.top - r.height / 2;
+    btn.style.transform = `translate(${x * 0.25}px, ${y * 0.35}px) translateY(-3px)`;
+  });
+  btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+});
+
+/* ============ TESTIMONIAL CAROUSEL ============ */
+const track = document.getElementById('testiTrack');
+const nav = document.getElementById('testiNav');
+const cards = track.children;
+let idx = 0;
+const perView = () => window.innerWidth <= 640 ? 1 : window.innerWidth <= 992 ? 2 : 3;
+const pages = () => Math.max(1, cards.length - perView() + 1);
+function buildDots() {
+  nav.innerHTML = '';
+  for (let i = 0; i < pages(); i++) {
+    const b = document.createElement('button');
+    b.className = 'testi-dot' + (i === idx ? ' active' : '');
+    b.addEventListener('click', () => go(i));
+    nav.appendChild(b);
+  }
+}
+function go(i) {
+  idx = Math.max(0, Math.min(i, pages() - 1));
+  const w = cards[0].getBoundingClientRect().width + 24;
+  track.style.transform = `translateX(-${idx * w}px)`;
+  [...nav.children].forEach((d, j) => d.classList.toggle('active', j === idx));
+}
+buildDots();
+let auto = setInterval(() => go((idx + 1) % pages()), 5000);
+track.addEventListener('mouseenter', () => clearInterval(auto));
+track.addEventListener('mouseleave', () => auto = setInterval(() => go((idx + 1) % pages()), 5000));
+window.addEventListener('resize', () => { idx = 0; buildDots(); go(0); });
+
+/* ============ BOOKING — WHATSAPP FORWARDING ============ */
+// ⚠️ CHANGE THIS TO YOUR REAL WHATSAPP NUMBER (no +, no spaces)
+const WHATSAPP_NUMBER = '971600000000';
+
+const checkin = document.getElementById('checkin');
+const checkout = document.getElementById('checkout');
+const guestsSelect = document.getElementById('guests');
+const roomsSelect = document.getElementById('rooms');
+const bookBtn = document.getElementById('bookBtn');
+const waToast = document.getElementById('waToast');
+const waToastText = document.getElementById('waToastText');
+
+// Set minimum dates to today
+const today = new Date().toISOString().split('T')[0];
+checkin.min = today;
+checkout.min = today;
+
+// Auto-set checkout to day after check-in
+checkin.addEventListener('change', () => {
+  if (checkin.value) {
+    const d = new Date(checkin.value);
+    d.setDate(d.getDate() + 1);
+    checkout.min = d.toISOString().split('T')[0];
+    if (checkout.value && checkout.value <= checkin.value) {
+      checkout.value = checkout.min;
+    }
+  }
+});
+
+// Format date nicely: 2026-10-15 → Wednesday, 15 October 2026
+function formatDate(iso) {
+  if (!iso) return '—';
+  const d = new Date(iso + 'T00:00:00');
+  return d.toLocaleDateString('en-GB', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  });
+}
+
+// Calculate nights between two dates
+function nightsBetween(start, end) {
+  const s = new Date(start);
+  const e = new Date(end);
+  const diff = Math.round((e - s) / (1000 * 60 * 60 * 24));
+  return diff > 0 ? diff : 0;
+}
+
+// Show toast notification
+function showToast(text, isError = false) {
+  waToastText.textContent = text;
+  waToast.classList.toggle('error', isError);
+  waToast.classList.add('show');
+  setTimeout(() => waToast.classList.remove('show'), 2600);
+}
+
+// Shake animation on the booking bar
+function shakeBar() {
+  const bar = document.getElementById('booking');
+  bar.animate([
+    { transform: 'translateX(0)' },
+    { transform: 'translateX(-8px)' },
+    { transform: 'translateX(8px)' },
+    { transform: 'translateX(-5px)' },
+    { transform: 'translateX(5px)' },
+    { transform: 'translateX(0)' }
+  ], { duration: 420, easing: 'ease-in-out' });
+}
+
+// Handle the Check Availability click
+bookBtn.addEventListener('click', () => {
+  const checkinVal = checkin.value;
+  const checkoutVal = checkout.value;
+  const guests = guestsSelect.value;
+  const rooms = roomsSelect.value;
+
+  // Validation
+  if (!checkinVal) {
+    shakeBar();
+    showToast('Please select a check-in date', true);
+    checkin.focus();
+    return;
+  }
+  if (!checkoutVal) {
+    shakeBar();
+    showToast('Please select a check-out date', true);
+    checkout.focus();
+    return;
+  }
+  if (checkoutVal <= checkinVal) {
+    shakeBar();
+    showToast('Check-out must be after check-in', true);
+    checkout.focus();
+    return;
+  }
+
+  const nights = nightsBetween(checkinVal, checkoutVal);
+
+  // Build a clean, professional WhatsApp message
+  const message = [
+    'Hello Sharjah Palace Hotel 👋',
+    '',
+    'I would like to enquire about availability for the following dates:',
+    '',
+    `📅 Check-in:   ${formatDate(checkinVal)}`,
+    `📅 Check-out:  ${formatDate(checkoutVal)}`,
+    `🌙 Nights:     ${nights} ${nights === 1 ? 'night' : 'nights'}`,
+    `👥 Guests:     ${guests}`,
+    `🛏️ Rooms:      ${rooms}`,
+    '',
+    'Please confirm availability and rate.',
+    'Thank you!'
+  ].join('\n');
+
+  // Encode and open WhatsApp
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+  showToast('Opening WhatsApp with your enquiry…');
+
+  // Small delay so the toast is visible before WhatsApp opens
+  setTimeout(() => {
+    window.open(url, '_blank');
+  }, 350);
+
+  // Analytics events
+  if (typeof gtag === 'function') {
+    gtag('event', 'booking_enquiry', {
+      event_category: 'engagement',
+      event_label: 'WhatsApp Check Availability',
+      value: nights
+    });
+  }
+  if (typeof fbq === 'function') {
+    fbq('track', 'Lead', {
+      content_name: 'Hotel Booking Enquiry',
+      value: nights,
+      currency: 'AED'
+    });
+  }
+});
+
+/* ============ TOUR CLICK TRACKING (optional) ============ */
+document.querySelector('.tour-launch-btn')?.addEventListener('click', () => {
+  if (typeof gtag === 'function') {
+    gtag('event', 'view_virtual_tour', {
+      'event_category': 'engagement',
+      'event_label': 'Sharjah Palace 360 Tour'
+    });
+  }
+  if (typeof fbq === 'function') {
+    fbq('trackCustom', 'ViewVirtualTour');
+  }
+});
+
+/* ============ SMOOTH ANCHORS (with proper offset for fixed header) ============ */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    if (id.length > 1 && document.querySelector(id)) {
+      e.preventDefault();
+      const target = document.querySelector(id);
+      const headerHeight = header.offsetHeight || 80;
+      const offset = headerHeight + 20;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+
+<!-- HOTEL SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Hotel",
+  "name":"Sharjah Palace Hotel",
+  "description":"4-star luxury hotel in Sharjah, UAE with elegant rooms, indoor and outdoor pools, spa, fitness centre, dining and direct booking benefits.",
+  "address":{"@type":"PostalAddress","streetAddress":"Al Taawun Street","addressLocality":"Sharjah","addressCountry":"AE"},
+  "telephone":"+971-6-000-0000",
+  "starRating":{"@type":"Rating","ratingValue":"4"},
+  "priceRange":"AED 350 - AED 800",
+  "amenityFeature":[
+    {"@type":"LocationFeatureSpecification","name":"Indoor Pool","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Outdoor Pool","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Fitness Centre","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Spa","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Free Wi-Fi","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Free Parking","value":true}
+  ]
+}
+</script>
+
+</body>
+</html>
